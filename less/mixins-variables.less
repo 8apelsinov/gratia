@@ -1,0 +1,33 @@
+@color-brown: #d89b64;
+@color-darkgrey: #151b28;
+@tablet-width: 660px;
+@desktop-width: 940px;
+
+.font-m() {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.font-cr() {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+}
+.text-title(@font-size; @line-height; @text-color) {
+    .font-m();
+    font-size: @font-size; //   48px;
+    line-height: @line-height;   //84.35px;
+    color: @text-color;                  //#000;
+    text-transform: uppercase;
+
+}
+.text-small(@font-size; @line-height; @text-color) {
+    font-size: @font-size;  //24px;
+    line-height: @line-height;  //36px;
+    color: @text-color;       //#8b909d;
+    .font-cr();
+}
+.text-small--white() {
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    .font-cr();
+}

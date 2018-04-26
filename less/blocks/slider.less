@@ -1,0 +1,196 @@
+.slider {
+   background-color: @color-darkgrey;
+    .font-m();
+    &__text,
+    &__arrows,
+    &__text--small {
+        display: none;
+    }
+    &__button {
+        color: @color-brown;
+    }
+    &__button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+       // border: 1px solid #262f45;
+        text-transform: uppercase;
+        padding: 24px;
+        text-align: center;
+        &:hover {
+            background-color: #262f45;
+        }
+        &:active {
+            opacity: .5;
+        }
+    }
+    &__slide {
+        padding: 0 20px;
+        
+    }
+    &__img {
+        width: 100%;
+    }
+}
+.slide-number {
+    display: block;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    &__item {
+        &--active  {
+        color: @color-brown;
+    }
+    }
+    
+}
+
+@media (min-width: @tablet-width) {
+    .slider { 
+        padding: 30px 60px;
+        &__text {
+            
+            &--small {
+                display: block;
+                .font-cr();
+                font-size: 10px;
+                color: #485471;
+                text-align: center;
+                vertical-align: middle;
+                margin-left: 95px;
+                margin-bottom: 25px;
+            }
+        }
+    
+        &__slide {
+            text-align: center;
+        }
+        &__img {
+            width: 300px;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+        }
+        &__button {
+            width: 100px;
+            font-size: 10px;
+            padding: 10px;
+            position: relative;
+            
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 3px;
+                color: #485471;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+    .text {
+       position: relative;
+        font-size: 75px;
+        &__item {
+            position: absolute;
+            color: @color-darkgrey;
+            line-height: 0;
+            text-shadow: 0 0 100px #000;
+            z-index: 0;
+            &:first-child {
+                top: 35px;
+                left: 174px;
+            }
+            &:nth-child(2) {
+                top: 190px;
+                left: 85px;
+                font-weight: 700;
+                font-size: 110px;
+            }
+            &:nth-child(3) {
+                top: 190px;
+                right: 85px;
+                font-weight: 700;
+                font-size: 110px;
+            }
+            &:last-child {
+                top: 335px;
+                left: 85px;
+            }
+        }
+    }
+    .arrows {
+        position: relative;
+    &__left,
+    &__right {
+        position: absolute;
+        width: 50%;
+        height: 50px;
+        top: 0px;
+        color: white;
+        cursor: pointer;
+        font-size: 50px;
+    }
+    &__left {
+        content: "<";
+        left: 0px;
+        &:hover {
+            background-color: #202738;
+        }
+    }
+    &__right {
+        content: ">";
+        right: 0px;
+        &:hover {
+            background-color: #202738;
+            }
+        }
+    }
+    .slide-number {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     
+        font-size: 10px;
+        height: 100px;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .text {
+         font-size: 90px;
+         &__item {
+            position: absolute;
+            color: @color-darkgrey;
+            line-height: 0;
+            text-shadow: 0 0 100px #000;
+            &:first-child {
+                top: 110px;
+                left: 274px;
+            }
+            &:nth-child(2) {
+                top: 265px;
+                left: 185px;
+                font-weight: 700;
+                font-size: 120px;
+            }
+            &:nth-child(3) {
+                top: 265px;
+                right: 185px;
+                font-weight: 700;
+                font-size: 120px;
+            }
+            &:last-child {
+                top: 410px;
+                left: 165px;
+            }
+        }
+    }
+}

@@ -5,24 +5,30 @@
         <title>Gratia</title>
         <meta name="viewport" content="width=device-width", initial-scale="1">
         <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i|Montserrat:700" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <section class="header__top-menu header__top-menu--index">
-                <a class="header__logo"></a>
+                <a class="header__logo logo">
+                    <svg class="logo__svg" width="34" height="34">
+                        <use xlink:href="sprite.svg#logo"></use>
+                    </svg>
+                    <span class="logo__text--index">Gratia</span>
+                </a>
                 <div class="header__nav nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class="nav__link" href="#">About</a>
+                            <a class="nav__link--index" href="#">About</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Menu</a>
+                            <a class="nav__link--index" href="#">Menu</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Gallery</a>
+                            <a class="nav__link--index" href="#">Gallery</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="#">Contact</a>
+                            <a class="nav__link--index" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -30,10 +36,7 @@
         </header>
         <main class="main-page">
             <section class="main-page__slider slider">
-                <div class="slider__toggle toggle">
-                    <div class="toggle__left"></div>
-                    <div class="toggle__right"></div>
-                </div>
+                
                 <div class="slider__text text">
                     <span class="text__item">Details</span>
                     <span class="text__item">ma</span>
@@ -41,37 +44,44 @@
                     <span class="text__item">perfection</span>
                 </div>
                 <div class="slider__slide">
-                    <img src="" width="" height="" alt="Try out cousinne">
+                    <img class="slider__img" src="img/slider.png" alt="Try out cousinne">
                 </div>
-                <div class="slider__slide-number slide-number">
-                    <span class="slide-number__item">01</span>
-                    <span class="slide-number__item">02</span>
-                    <span class="slide-number__item">03</span>
+                <div class="slider__arrows arrows">
+                    <div class="arrows__left"></div>
+                    <div class="arrows__right"></div>
                 </div>
                 <div class="slider__bottom">
+                    <div class="slider__numbers slide-number">
+                        <span class="slide-number__item" tabindex="0">01</span>
+                        <span class="slide-number__item slide-number__item--active" tabindex="0">02</span>
+                        <span class="slide-number__item" tabindex="0">03</span>
+                    </div>
+                    
                     <span class="slider__text--small">and perfection is  not a detail</span>
                     <a class="slider__button" href="#">book a table</a>
                 </div>
             </section>
+            
             <section class="main-page__offers offers">
                 <span class="offers__title">Perfection</span>
                 <em class="offers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
                 <div class="offers__block">
                     <div class="offers__item">
-                        <span class="offers__title--brown">Desserts</span>
-                        <em class="offers__text--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
+                        <a class="offers__title offers__title--brown" href="#">Desserts</a>
+                        <em class="offers__text offers__text--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
                     </div>
                     <div class="offers__item">
-                        <span class="offers__title">Smoothies</span>
+                        <a class="offers__title" href="#">Smoothies</a>
                         <em class="offers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
                     </div>
                     <div class="offers__item">
-                        <span class="offers__title--brown">Breakfast</span>
-                        <em class="offers__text--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
+                        <a class="offers__title offers__title--brown" href="#">Breakfast</a>
+                        <em class="offers__text offers__text--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em>
                     </div>
                 </div>
                 <a class="offers__link" href="#">check other offers</a>
             </section>
+            
             <section class="main-page__details details">
                 <div class="details__wrapper">
                     <span class="details__title">details</span>
