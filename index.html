@@ -137,5 +137,74 @@
                 </a>
             </div>
         </footer>
+        
+        <section class="booking hidden">
+            <div class="booking__wrapper">
+                <div class="booking__button">
+                    <input type="button" name="booking-button">
+                    <label for="booking-button" class="booking__label" tabindex="0"></label>
+                </div>
+                <span class="booking__title">book a table</span>
+                <em class="booking__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em> 
+                <form action="" method="post">
+                    <input type="text" class="booking__day" placeholder="DD" required>
+                    <input type="text" class="booking__month" placeholder="MM" required>
+                    <input type="text" class="booking__year" placeholder="YYYY" required>
+                    <input type="time" class="booking__time" placeholder="HOUR" required>
+                    <input type="text" class="booking__people" placeholder="number of people" max="6" required>
+                    <input type="text" class="booking__name" placeholder="first name and last name" required>
+                    <input type="number" class="booking__phone" placeholder="phone number" required>
+                    <input type="email" class="booking__email" placeholder="e-mail">
+                    <input type="text" class="booking__menu" name="booking-menu" list="booking-menu" placeholder="prepare menu"><br>
+                        <datalist id="booking-menu">
+                            <option value="breakfast">Breakfast</option>
+                            <option value="branch">Branch</option>
+                            <option value="business">Business meeting</option>
+                            <option value="dinner">Dinner</option>
+
+                        </datalist>
+                    <textarea class="booking__textarea" rows="7" placeholder="Your message.."></textarea><br>
+                    <input type="submit" class="booking__submit" value="send">
+
+
+
+                </form>
+            </div>
+        </section>
+        
+        <script>
+            var buttonOpen = document.querySelector(".slider__button");
+            var modal = document.querySelector(".booking");
+            var buttonClose = modal.querySelector(".booking__label");
+            
+            var ENTER_KEYCODE = 13;
+            var ESC_KEYCODE = 27;
+            
+            var openModal = function() {
+                modal.classList.remove("hidden");
+            };
+            var closeModal = function() {
+                modal.classList.add("hidden");
+            };
+            
+            
+            buttonOpen.addEventListener("click", function() {
+                openModal();
+                
+            });
+            buttonOpen.addEventListener("keydown", function(e) {
+                if (e == ENTER_KEYCODE) {
+                    openModal();
+                }
+            });
+            buttonClose.addEventListener("click", function() {
+                closeModal();
+            });
+            buttonClose.addEventListener("keydown", function(e) {
+                if (e == ENTER_KEYCODE) {
+                    closeModal();
+                }
+            });
+        </script>
     </body>
 </html>

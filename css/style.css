@@ -6,6 +6,9 @@ a {
   list-style: none;
   text-decoration: none;
 }
+.hidden {
+  display: none;
+}
 body {
   width: 320px;
   margin: 0 auto;
@@ -1029,5 +1032,204 @@ body {
   }
   .info__components--product {
     width: 230px;
+  }
+}
+input {
+  box-shadow: 0 0 15px #dcdddf;
+  border: 0;
+  outline: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 8px;
+  color: #000;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+input:hover {
+  box-shadow: 0 0 15px #8b909d;
+}
+input[type="button"] {
+  display: none;
+}
+.booking {
+  outline: 1px dashed pink;
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100px;
+  z-index: 50;
+}
+.booking__wrapper {
+  position: relative;
+}
+.booking__button {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+.booking__label {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #151b28;
+  cursor: pointer;
+}
+.booking__label::before,
+.booking__label::after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  left: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: #d89b64;
+}
+.booking__label::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.booking__label::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.booking__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.booking__text {
+  font-size: 10px;
+  line-height: 10px;
+  color: #8b909d;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.booking__day,
+.booking__month,
+.booking__year,
+.booking__phone,
+.booking__name,
+.booking__email {
+  width: 100%;
+}
+.booking__time,
+.booking__people {
+  width: 49%;
+}
+.booking__menu {
+  width: 100%;
+  background-color: #151b28;
+  color: #d89b64;
+}
+.booking__textarea {
+  width: 100%;
+  outline: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 8px;
+  color: #dcdddf;
+  text-transform: uppercase;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-transform: none;
+  box-sizing: border-box;
+}
+.booking__submit {
+  width: 100%;
+  background-color: #d89b64;
+  color: #fff;
+}
+@media (min-width: 660px) {
+  input {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+  .booking {
+    width: 660px;
+    padding: 40px;
+  }
+  .booking__button {
+    top: 0px;
+    right: 0px;
+  }
+  .booking__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .booking__text {
+    font-size: 12px;
+    line-height: 12px;
+    color: #8b909d;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+  }
+  .booking__day,
+  .booking__month,
+  .booking__year {
+    width: 83px;
+    margin-right: 10px;
+  }
+  .booking__time {
+    width: 135px;
+    margin-right: 10px;
+  }
+  .booking__people {
+    width: 135px;
+  }
+  .booking__name,
+  .booking__email {
+    width: 278px;
+    margin-right: 10px;
+  }
+  .booking__phone,
+  .booking__menu {
+    width: 285px;
+  }
+}
+@media (min-width: 940px) {
+  .booking {
+    width: 940px;
+  }
+  .booking__day,
+  .booking__month,
+  .booking__year {
+    width: 125px;
+    margin-right: 20px;
+  }
+  .booking__time {
+    width: 192px;
+    margin-right: 20px;
+  }
+  .booking__people {
+    width: 192px;
+  }
+  .booking__name,
+  .booking__email {
+    width: 422px;
+    margin-right: 20px;
+  }
+  .booking__phone,
+  .booking__menu {
+    width: 410px;
   }
 }
