@@ -17,8 +17,11 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        border-bottom: 1px solid @color-lightgrey;
         &--index {
             background-color: @color-darkgrey;
+            border: none;
                
       }
     }
@@ -49,6 +52,7 @@ body {
         
     }
     &__link {
+        color: #000;
         &:hover, 
         &:active {
             color: @color-brown;
@@ -59,6 +63,9 @@ body {
             &:active {
                 color: @color-brown;
         }
+        }
+        &--active {
+            color: @color-brown;
         }
     }
 }

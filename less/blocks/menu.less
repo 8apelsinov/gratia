@@ -1,0 +1,87 @@
+.menu {
+    padding: 20px 10px;
+    &__title {
+        .text-title(18px; 18px; #000);
+            display: block;
+            text-align: center;
+    }
+    &__text {
+       .text-small(10px; 10px; @color-grey);
+        display: block;
+        text-align: center;
+         padding: 10px 0;
+      margin-bottom: 10px;
+    }
+    &__item {
+        display: block;
+        width: 100%;
+        box-shadow: 0 0 15px @color-lightgrey;
+        margin-bottom: 10px;
+        padding: 10px;
+        &:hover {
+            box-shadow: 0 0 15px @color-grey;
+        }
+    }
+    
+}
+
+@media (min-width: @tablet-width) {
+    .menu {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__text {
+              margin-bottom: 20px;
+        }
+        &__item {
+            width: 300px;
+            height: 305px;
+            background-color: @color-lightgrey;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 0;
+            padding-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-end;
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+            
+            &--main {
+                background-image: url(../img/menu-1.png);  
+            }
+            &--soups {
+                background-image: url(../img/menu-2.png);  
+            }
+            &--hamburgers {
+                background-image: url(../img/menu-3.png);  
+            }
+            &--desserts {
+                background-image: url(../img/menu-4.png);  
+            }
+            &--barbecue {
+                background-image: url(../img/menu-5.png);  
+            }
+            &--salads {
+                background-image: url(../img/menu-6.png);  
+            }
+        }
+        &__info {
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            padding: 15px;
+            padding-top: 25px;
+        }
+    }   
+}
+
+@media (min-width: @desktop-width) {
+    .menu {
+    
+    }
+}

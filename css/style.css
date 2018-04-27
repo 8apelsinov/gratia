@@ -21,9 +21,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #dcdddf;
 }
 .header__top-menu--index {
   background-color: #151b28;
+  border: none;
 }
 .logo {
   display: flex;
@@ -48,6 +50,9 @@ body {
 .nav__item {
   margin-left: 20px;
 }
+.nav__link {
+  color: #000;
+}
 .nav__link:hover,
 .nav__link:active {
   color: #d89b64;
@@ -57,6 +62,9 @@ body {
 }
 .nav__link--index:hover,
 .nav__link--index:active {
+  color: #d89b64;
+}
+.nav__link--active {
   color: #d89b64;
 }
 @media (min-width: 660px) {
@@ -766,5 +774,90 @@ body {
   }
   .footer__text {
     margin-bottom: 40px;
+  }
+}
+.menu {
+  padding: 20px 10px;
+}
+.menu__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.menu__text {
+  font-size: 10px;
+  line-height: 10px;
+  color: #8b909d;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.menu__item {
+  display: block;
+  width: 100%;
+  box-shadow: 0 0 15px #dcdddf;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.menu__item:hover {
+  box-shadow: 0 0 15px #8b909d;
+}
+@media (min-width: 660px) {
+  .menu__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .menu__text {
+    margin-bottom: 20px;
+  }
+  .menu__item {
+    width: 300px;
+    height: 305px;
+    background-color: #dcdddf;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .menu__item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .menu__item--main {
+    background-image: url(../img/menu-1.png);
+  }
+  .menu__item--soups {
+    background-image: url(../img/menu-2.png);
+  }
+  .menu__item--hamburgers {
+    background-image: url(../img/menu-3.png);
+  }
+  .menu__item--desserts {
+    background-image: url(../img/menu-4.png);
+  }
+  .menu__item--barbecue {
+    background-image: url(../img/menu-5.png);
+  }
+  .menu__item--salads {
+    background-image: url(../img/menu-6.png);
+  }
+  .menu__info {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    padding-top: 25px;
   }
 }
