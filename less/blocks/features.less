@@ -1,0 +1,99 @@
+.features {
+    background-color: white;
+    
+    &__title {
+        .text-title(14px; 14px; #000);
+            display: block;
+            text-align: center;
+        &--brown {
+            .text-title(14px; 14px; @color-brown);
+         }
+    }
+    &__text {
+       .text-small(10px; 10px; @color-grey);
+        display: block;
+        text-align: center;
+         padding: 20px 0;
+        &--white {
+                .text-small(10px; 10px; white);
+            }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+            width: 320px;
+            height: 140px;
+        &:first-of-type {
+            background-color: #f8f8f8;
+          }
+            
+         &:nth-of-type(2) {
+             background-color: @color-darkgrey;
+          }
+        &:nth-of-type(3) {
+            background-color: #f8f8f8;
+           
+        }
+    }
+
+}
+
+@media (min-width: @tablet-width) {
+    .features {
+         padding: 40px 0;
+        padding-bottom: 0;
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__item {
+           padding: 10px;
+            box-sizing: border-box;
+            height: 100px;
+            margin-right: 10px;
+            &:nth-of-type(2) {
+                height: 160px;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+    }
+        &__title {
+            .text-title(20px; 20px; #000);
+            &--brown {
+                .text-title(12px; 12px; @color-brown);
+            }
+        }
+        &__text {
+            display: block;
+            text-align: center;
+            padding: 20px 0;
+            .text-small(12px; 10px; @color-grey);
+            &--white {
+                .text-small(8px; 10px; white);
+            }
+        }
+        &__wrapper {
+            display: flex;
+            
+        }
+    
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .features {
+        &__item {
+            height: 166px;
+            &:nth-of-type(2) {
+                height: 200px;
+            }
+        }
+    
+    }
+}

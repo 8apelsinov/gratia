@@ -1,0 +1,85 @@
+.details {
+    background-image: url(../img/details.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    &__wrapper {
+        display: block;
+        background-color: white;
+        width: 100%;
+        padding: 15px 0;
+            
+    }
+    &__title {
+        .text-title(18px; 18px; #000);
+            display: block;
+            text-align: center;
+    }
+    &__text {
+       .text-small(10px; 10px; @color-grey);
+        display: block;
+        text-align: center;
+         padding: 10px 0;
+    }
+    &__button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+       padding: 12px;
+        text-align: center;
+         .text-title(8px; 8px; @color-brown);
+        border: 1px solid @color-lightgrey;
+        
+        &:hover,
+        &:active {
+            background-color: @color-lightgrey;
+        }
+           
+    }
+}
+
+
+@media (min-width: @tablet-width) {
+    .details {
+        height: 350px;
+        &__wrapper {
+            display: block;
+            background-color: white;
+            width: 370px;
+            padding: 0;
+           }
+        &__inner {
+            border: 1px solid @color-lightgrey;
+            margin: 20px;
+            padding: 20px;
+        }
+        &__title {
+        .text-title(22px; 22px; #000);
+            margin-bottom: 10px;
+        }
+        &__text {
+       .text-small(14px; 14px; @color-grey);
+            margin-bottom: 10px;
+        }
+        &__button {
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+            
+        }
+    }
+}
+
+
+@media (min-width: @desktop-width) {
+    .details {
+        &__wrapper {
+             
+        }
+    }
+}

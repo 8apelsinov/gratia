@@ -1,11 +1,7 @@
 .offers {
     padding: 25px 0;
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
+    padding-bottom: 0;
+  
     &__title {
         .text-title(24px; 24px; #000);
             display: block;
@@ -25,14 +21,22 @@
         }
     }
     &__text {
-            display: none;
-//        .text-small(10px; 10px; #8b909d);
-//        display: block;
-//        text-align: center;
+       .text-small(10px; 10px; @color-grey);
+        display: block;
+        text-align: center;
+         padding: 20px 0;
+        &--white {
+                .text-small(10px; 10px; white);
+            }
     }
     &__item {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
         background-size: contain;
+        background-repeat: no-repeat;
             width: 320px;
             height: 240px;
         &:first-of-type {
@@ -47,7 +51,8 @@
             
          
         &:nth-of-type(2) {
-             background-image: url(../img/offers-3.png);
+             background-color: crimson;
+          
         }
         &:nth-of-type(3) {
              background-image: url(../img/offers-2.png);
@@ -85,11 +90,23 @@
 @media (min-width: @tablet-width) {
     .offers {
         padding: 40px 0;
-        &__item {
+        padding-bottom: 0;
+        &__wrapper {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
+        }
+        &__item {
+           
+            height: 166px;
+            margin-right: 10px;
+            &:nth-of-type(2) {
+                height: 200px;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
     }
         &__title {
             
@@ -101,12 +118,12 @@
             display: block;
             text-align: center;
             padding: 20px 0;
-            .text-small(12px; 10px; #8b909d);
+            .text-small(12px; 10px; @color-grey);
             &--white {
-                .text-small(12px; 10px; white);
+                .text-small(8px; 10px; white);
             }
         }
-        &__block {
+        &__wrapper {
             display: flex;
             
         }
@@ -115,7 +132,7 @@
                 letter-spacing: 2px;
             &:hover, 
             &:active {
-                 background-color: #262f45;
+                 opacity: .1;
               
             }
         
@@ -126,6 +143,12 @@
 
 @media (min-width: @desktop-width) {
     .offers {
-    
+        &__item {
+           height: 230px; 
+            margin-right: 25px;
+            &:nth-of-type(2) {
+                height: 300px;
+            }
+        }
     }
 }
