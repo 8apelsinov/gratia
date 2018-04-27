@@ -523,6 +523,7 @@ body {
 }
 .features {
   background-color: white;
+  padding-bottom: 10px;
 }
 .features__title {
   font-family: 'Montserrat', sans-serif;
@@ -579,7 +580,6 @@ body {
 @media (min-width: 660px) {
   .features {
     padding: 40px 0;
-    padding-bottom: 0;
   }
   .features__wrapper {
     display: flex;
@@ -642,5 +642,129 @@ body {
   }
   .features__item:nth-of-type(2) {
     height: 200px;
+  }
+}
+.footer {
+  padding-bottom: 20px;
+}
+.footer__logo {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #dcdddf;
+  width: 54px;
+  height: 54px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.footer__logo::before,
+.footer__logo::after {
+  position: absolute;
+  content: "";
+  width: 133px;
+  height: 1px;
+  background-color: #dcdddf;
+  top: 50%;
+}
+.footer__logo::before {
+  left: -133px;
+}
+.footer__logo::after {
+  right: -133px;
+}
+.footer__logo--svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.footer__text {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 25px;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100px;
+  margin: 0 auto;
+}
+.social__fb,
+.social__instagram,
+.social__twitter {
+  fill: #dcdddf;
+}
+.social__fb:hover,
+.social__instagram:hover,
+.social__twitter:hover {
+  fill: red;
+  transition: .6s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.social__fb:hover {
+  fill: #3b5998;
+}
+.social__instagram:hover {
+  fill: #d62976;
+}
+.social__twitter:hover {
+  fill: #00aced;
+}
+@media (min-width: 660px) {
+  .footer {
+    padding-bottom: 40px;
+  }
+  .footer__logo {
+    margin-bottom: 25px;
+  }
+  .footer__logo::before,
+  .footer__logo::after {
+    width: 293px;
+  }
+  .footer__logo::before {
+    left: -293px;
+  }
+  .footer__logo::after {
+    right: -293px;
+  }
+  .footer__text {
+    margin-bottom: 45px;
+  }
+  .social {
+    position: relative;
+  }
+  .social::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #dcdddf;
+    top: -15px;
+    left: 0;
+  }
+}
+@media (min-width: 940px) {
+  .footer__logo::before,
+  .footer__logo::after {
+    width: 443px;
+  }
+  .footer__logo::before {
+    left: -443px;
+  }
+  .footer__logo::after {
+    right: -443px;
+  }
+  .footer__text {
+    margin-bottom: 40px;
   }
 }

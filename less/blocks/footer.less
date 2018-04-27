@@ -1,0 +1,124 @@
+.footer {
+    padding-bottom: 20px;
+    &__logo {
+        display: block;
+        border-radius: 50%;
+        border: 1px solid @color-lightgrey;
+        width: 54px;
+        height: 54px;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        &::before, 
+        &::after {
+            position: absolute;
+            content: "";
+            width: 133px;
+            height: 1px;
+            background-color: @color-lightgrey;
+            top: 50%;
+            
+        }
+        &::before {
+            left: -133px;
+        }
+        &::after {
+            right: -133px;
+        }
+        &--svg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    }
+    &__text {
+        display: block;
+        width: 180px;
+        margin: 0 auto;
+        .text-title(16px; 16px; #000);
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 25px;
+    }
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100px;
+    margin: 0 auto;
+    
+    &__fb,
+    &__instagram,
+    &__twitter {
+        fill: @color-lightgrey;
+        &:hover {
+            fill: red;
+            transition: .6s;
+            transform: scale(1.2);
+        }
+    }
+    &__fb:hover {
+        fill: #3b5998;
+    }
+    &__instagram:hover {
+        fill: #d62976;
+    }
+    &__twitter:hover {
+        fill: #00aced;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .footer {
+        padding-bottom: 40px;
+        &__logo {
+            margin-bottom: 25px;
+            &::before, 
+            &::after {
+                width: 293px;
+             }
+        &::before {
+            left: -293px;
+        }
+        &::after {
+            right: -293px;
+            }
+        }
+        &__text {
+            margin-bottom: 45px;
+        }
+    }
+    .social {
+        position: relative;
+        &::before  {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: @color-lightgrey;
+            top:-15px;
+            left: 0;
+        }
+    }
+}
+@media (min-width: @desktop-width) {
+    .footer {
+        &__logo {
+
+                &::before, 
+                &::after {
+                    width: 443px;
+                 }
+            &::before {
+                left: -443px;
+            }
+            &::after {
+                right: -443px;
+            }
+        }
+        &__text {
+            margin-bottom: 40px;
+        }
+    }
+}
