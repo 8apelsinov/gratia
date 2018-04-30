@@ -29,13 +29,16 @@ input[type="button"] {
         position: absolute;
         right: -20px;
         top: -20px;
+        :hover {
+            transform: rotate(360deg);
+        }
     }
     &__label {
         position: relative;
         display: block;
         width: 40px;
         height: 40px;
-        background-color: @color-darkgrey;
+   //     background-color: @color-darkgrey;
         cursor: pointer;
         
         &::before, 
@@ -54,6 +57,7 @@ input[type="button"] {
         &::after {
             transform: rotate(-45deg);
         }
+        
     }
     &__title {
         .text-title(18px; 18px; #000);
@@ -109,6 +113,7 @@ input[type="button"] {
     }
     .booking {
         width: 660px;
+         box-shadow: 0 0 15px @color-lightgrey;
         padding: 40px;
         &__button {
             top: 0px;

@@ -6,6 +6,16 @@
     &__text--small {
         display: none;
     }
+    &__slide {
+        width: 320px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: @color-darkgrey;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
     &__button {
         color: @color-brown;
     }
@@ -47,9 +57,13 @@
     
 }
 
+
 @media (min-width: @tablet-width) {
     .slider { 
         padding: 30px 60px;
+        &__arrows {
+            display: block;
+        }
         &__text {
             
             &--small {
@@ -66,6 +80,8 @@
     
         &__slide {
             text-align: center;
+             width: 450px;
+            height: 370px;
         }
         &__img {
             width: 300px;
@@ -126,29 +142,27 @@
     }
     .arrows {
         position: relative;
+        .font-cr();
+        font-size: 20px;
+        font-style: normal;
     &__left,
     &__right {
         position: absolute;
-        width: 50%;
+        width: 50px%;
         height: 50px;
-        top: 0px;
-        color: white;
+        top: -180px;
+        color: #202738;
         cursor: pointer;
         font-size: 50px;
-    }
-    &__left {
-        content: "<";
-        left: 0px;
         &:hover {
-            background-color: #202738;
+            color: @color-brown;
         }
     }
+    &__left {
+        left: 0px;
+    }
     &__right {
-        content: ">";
-        right: 0px;
-        &:hover {
-            background-color: #202738;
-            }
+       right: 0px;
         }
     }
     .slide-number {
@@ -161,9 +175,16 @@
         font-weight: 300;
         margin: 0;
     }
+    
 }
 
 @media (min-width: @desktop-width) {
+    .slider {
+        &__slide {
+        width: 600px;
+        height: 495px;
+        }
+    }
     .text {
          font-size: 90px;
          &__item {
@@ -191,6 +212,13 @@
                 top: 410px;
                 left: 165px;
             }
+        }
+        
+    }
+    .arrows {
+        &__left, 
+        &__right {
+            top: -235px;
         }
     }
 }

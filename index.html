@@ -44,17 +44,17 @@
                     <span class="text__item">perfection</span>
                 </div>
                 <div class="slider__slide">
-                    <img class="slider__img" src="img/slider.png" alt="Try out cousinne">
+<!--                    <img class="slider__img" src="img/slider.png" alt="Try out cousinne">-->
                 </div>
                 <div class="slider__arrows arrows">
-                    <div class="arrows__left"></div>
-                    <div class="arrows__right"></div>
+                    <div class="arrows__left">&lt;</div>
+                    <div class="arrows__right">&gt;</div>
                 </div>
                 <div class="slider__bottom">
                     <div class="slider__numbers slide-number">
-                        <span class="slide-number__item" tabindex="0">01</span>
-                        <span class="slide-number__item slide-number__item--active" tabindex="0">02</span>
-                        <span class="slide-number__item" tabindex="0">03</span>
+                        <span class="slide-number__item 01" tabindex="0">01</span>
+                        <span class="slide-number__item 02 slide-number__item--active" tabindex="0">02</span>
+                        <span class="slide-number__item 03" tabindex="0">03</span>
                     </div>
                     
                     <span class="slider__text--small">and perfection is  not a detail</span>
@@ -149,9 +149,9 @@
                 <form action="" method="post">
                     <input type="text" class="booking__day" placeholder="DD" required>
                     <input type="text" class="booking__month" placeholder="MM" required>
-                    <input type="text" class="booking__year" placeholder="YYYY" required>
+                    <input type="text" class="booking__year" value="2018        " required>
                     <input type="time" class="booking__time" placeholder="HOUR" required>
-                    <input type="text" class="booking__people" placeholder="number of people" max="6" required>
+                    <input type="number" class="booking__people" placeholder="number of people" min="1" max="6" required>
                     <input type="text" class="booking__name" placeholder="first name and last name" required>
                     <input type="number" class="booking__phone" placeholder="phone number" required>
                     <input type="email" class="booking__email" placeholder="e-mail">
@@ -193,18 +193,66 @@
                 
             });
             buttonOpen.addEventListener("keydown", function(e) {
-                if (e == ENTER_KEYCODE) {
+                if (e.keyCode == ENTER_KEYCODE) {
                     openModal();
+                } else if (e.keyCode == ESC_KEYCODE) {
+                    closeModal();
                 }
             });
             buttonClose.addEventListener("click", function() {
                 closeModal();
             });
             buttonClose.addEventListener("keydown", function(e) {
-                if (e == ENTER_KEYCODE) {
+                if (e.keyCode == ENTER_KEYCODE) {
                     closeModal();
                 }
             });
+            
+            /*slider*/
+            var arrowLeft = document.querySelector(".arrows__left");
+            var arrowRight = document.querySelector(".arrows__right");
+            var slider = {
+                slides: ["slider", "slider1", "slider2"],
+                frame: 0,
+                set: function(image) {
+                    document.querySelector(".slider__slide").style.backgroundImage = "url(img/" + image + ".png)";
+                },
+                init: function() {
+                    this.set(this.slides[this.frame]);
+                },
+                left: function() {
+                    this.frame--;
+                    if(this.frame < 0) {
+                        this.frame = this.slides.length - 1;
+                    }
+                        this.set(this.slides[this.frame]);  
+                },
+                right: function() {
+                    this.frame++;
+                    if (this.frame == this.slides.length) {
+                        this.frame = 0;
+                    }
+                    this.set(this.slides[this.frame]);
+                }
+            };
+            
+           
+//         
+            window.onload = function() {
+                slider.init();
+                setInterval(function(){
+                    slider.right();
+                }, 5000);
+            };
+             arrowLeft.addEventListener("click", function(){
+                slider.left();
+            });
+            arrowRight.addEventListener("click", function(){
+                slider.right();
+            });
+            
+             
+            
         </script>
     </body>
 </html>
